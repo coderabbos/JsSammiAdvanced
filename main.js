@@ -1,11 +1,11 @@
-// #3 Variables
+//                                                      Variables
 // let, const, var
 //let o'zgaruvchan const o'zgarmas(lekin o'zgartirsa bo'ladi)
 // local bo'lib {} ichida ishlatsa bo'ladi va juda muhim
 // farqi var global o'zgaruvchi hisoblanadi va {} ichida ishlatib bo'lmaydi
 
 
-// #4 Ma'lumot turlari 
+//                                                   Ma'lumot turlari 
 //     #1 number
 //     #2 string
 //     #3 boolean (true,false)
@@ -20,7 +20,7 @@
 //          #5 Error
 
 
-// Object
+//                                                      Object
 // const person={
 //     // xususiyat(property)(name) : qiymat(value)- number,string(Abbos),boolean,undefined, array, function, object
 //     name: 'Abbos',
@@ -37,7 +37,7 @@
 // const colors = ['red','black','green','white',];
 // console.log(colors[2]);
 
-//#5 Window, Interpolation, Operators
+//                                               Window, Interpolation, Operators
 
 // alert ('Hello');
 
@@ -46,7 +46,7 @@
 // const age = +prompt('How old are you?','12')// 12ni joyiga default(' ') bo'sh qiymat qoldirgan yaxshi
 //  + bu prompt typeni number qilib beradi
 
-// Interpolation
+//                                                      Interpolation
 
 // const firstName='Abbos'
 // const sureName='Eshmatov'
@@ -57,7 +57,7 @@
 // console.log(`My name is ${firstName} ${sureName} I am ${age2} years old.`)
 // ${} ning ichiga property hohlagan function yozxsak ham bo'ladi va bu (``) backtick bilan o'raladi.
 
-// Operators
+//                                                          Operators
 
 // const x = 3
 // const y = 6
@@ -75,7 +75,7 @@
 
 // console.log(birthday+currentYear)// 19992025
 
-// Increment vs Decrement
+//                                                      Increment vs Decrement
 
 // let a=5
 // let b=10
@@ -104,7 +104,7 @@
 // console.log(`I am ${age3} years old.`)
 
 
-// Amaliyot 
+//                                                  Amaliyot 
 
 // const numberOfSeries = +prompt('Nechta serial ko\'rdingiz?' , '')
 // // console.log(numberOfSeries)
@@ -131,7 +131,7 @@
 
 // console.log(seriesDB)
 
-// Shartli operator if, else if
+//                                                  Shartli operator if, else if
 
 // const trafficLight='green'
 
@@ -168,7 +168,7 @@
 // }
 
 
-// Shartli operator "tsikl" ---- "While" , "Do while" and "For"
+//                                    Shartli operator "tsikl" ---- "While" , "Do while" and "For"
 
 // let number = parseInt(prompt('Musbat son kiriting!', ''));
 // let i=1
@@ -183,7 +183,7 @@
 //     console.log(number1);
 //     number1++;
 // }
-//       YOKI
+//                                                          YOKI
 // do{
 //     console.log(number1);
 //     number1++;
@@ -191,7 +191,7 @@
 // while(number1 <= 5)
 
 
-// FOR tsikl operatori
+//                                                  FOR tsikl operatori
 
 // let number = 1;
 // for (number; number <= 10; number++){
@@ -200,42 +200,70 @@
 //     }
 //     console.log(number);
 // }
-// Ternary operator 
+//                                                      Ternary operator 
 
 // const age = 18
 
 // age < 18 ? console.log('not Allowed'): console.log('Allowed')
 
 
-// Amaliyot
+//                                                           Amaliyot
 
 
-const numberOfSeries = +prompt('Nechta serial ko\'rdingiz?' , '')
+// const numberOfSeries = +prompt('Nechta serial ko\'rdingiz?' , '')
 
-const seriesDB = {
-    count: numberOfSeries,
-    series:{},
-    actors:{},
-    genres: [],
-    private: false, 
-}
+// const seriesDB = {
+//     count: numberOfSeries,
+//     series:{},
+//     actors:{},
+//     genres: [],
+//     private: false, 
+// }
 
-for (let i=0; i < 2; i++){
-    const firstQuestion = prompt('Oxirgi ko\'rgan serialingiz?', '')
-    const secondQuestion = prompt('Nechi baho berasiz?','')
-        if (firstQuestion !== null && secondQuestion !== null && firstQuestion !=='' && secondQuestion !==''){
-            seriesDB.series[firstQuestion]=secondQuestion;
-            console.log("Done");
-        }else{
-            i--;
-        }
-}
-if ( seriesDB.count < 5){
-    console.log("Kam serial ko'rar ekansiz");
-}if (seriesDB.count > 10){
-    console.log("Super serial ko\'rar odam ekansiz")
-}else {
-    console.log("Klassik serial ko\'rar odam ekansiz")
-}
+// for (let i=0; i < 2; i++){
+//     const firstQuestion = prompt('Oxirgi ko\'rgan serialingiz?', '')
+//     const secondQuestion = prompt('Nechi baho berasiz?','')
+//         if (firstQuestion !== null && secondQuestion !== null && firstQuestion !=='' && secondQuestion !==''){
+//             seriesDB.series[firstQuestion]=secondQuestion;
+//             console.log("Done");
+//         }else{
+//             i--;
+//         }
+// }
+// if ( seriesDB.count < 5){
+//     console.log("Kam serial ko'rar ekansiz");
+// }else if (seriesDB.count > 10){
+//     console.log("Super serial ko\'rar odam ekansiz")
+// }else if (seriesDB.count >= 5 && seriesDB.count <= 10){
+//     console.log("Klassik serial ko\'rar odam ekansiz")
+// }
                                                         
-console.log(seriesDB)
+// console.log(seriesDB);
+
+
+//                                                       Functionlar
+
+//                                                   Function decloration
+
+// function showHelloToUser(name){
+//     age = 26
+//     console.log( `Hello, Mr.${name}! You are now ${age} years old.`)
+// }
+
+// showHelloToUser('Abbos');
+// // console.log(age);   
+
+
+
+// function calculate (a, b){
+//     return (a+b);// return.dan kein code.lar blocklanadi code.lar ungacha yozilishi kerak!
+// }
+// const firstCal=calculate(1,8)
+// console.log(firstCal);
+
+//                                                     Function expression
+
+const showHelloWorld = function(text){
+    console.log(text);
+}
+showHelloWorld('Hello world');
