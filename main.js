@@ -267,3 +267,15 @@ const showHelloWorld = function(text){
     console.log(text);
 }
 showHelloWorld('Hello world');
+
+const calculate = function(a, b){
+    return (a+b);
+}
+console.log(calculate(5, 10));//15
+
+//                                                      Arrow function
+
+const calculate1 = (a,b) =>{
+    console.log(a+b)
+}
+calculate1(2,5);// 7
