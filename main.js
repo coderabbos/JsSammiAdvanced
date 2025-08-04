@@ -279,3 +279,41 @@ const calculate1 = (a,b) =>{
     console.log(a+b)
 }
 calculate1(2,5);// 7
+
+
+//                                      Methods - Object ichidagi functionlar
+
+//                                                  String methods
+
+const text='Hello world';
+const password='      Abbos99     '
+
+// Length is property
+
+console.log('Uzunligi', text.length)
+
+// Methods 
+
+console.log('1-usul Aniq pozitsiya indexdagi harf:', text.charAt(6))
+console.log('2-usul Aniq pozitsiya indexdagi harf:', text[6])
+console.log('Harflarni har birini kattalashtirish:', text.toUpperCase())
+console.log('Harflarni har birini kattalashtirish:', text.toLowerCase())
+console.log('1-usul Matinni kesish: oxiridan kesish uchun manfiy raqamdan foydalanamiz', text.slice(0,-4))// kesilganni qaytardi
+console.log('2-usul Matinni kesish:', text.substring(0, 4))
+console.log('Bo\'sh spacelarni olib tashlash ikki tarafdan', password.trim())
+console.log('Bo\'sh spacelarni olib tashlash old tarafdan', password.trimStart())
+console.log('Bo\'sh spacelarni olib tashlash orqa tarafdan', password.trimEnd())
+console.log(text)
+
+//                              Number methods
+
+const number=12.6
+const width='240.42px'
+
+console.log('Sonni butunlab beradi', Math.round(number))
+console.log('Qattiy butunlaydi nuqtadan keingi sonni hisobga olmaydi', Math.floor(number))
+console.log('String malumot turidan butun sonni qaytarib beradi', parseInt(width))
+console.log('String malumot turidan son qilib beradi', parseFloat(width))
+
+
+console.log(number)
