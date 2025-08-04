@@ -320,37 +320,37 @@
 // console.log(width)
 
 //                                                     Amaliyot
-const numberOfSeries = +prompt('Nechta serial ko\'rdingiz?' , '')
+// const numberOfSeries = +prompt('Nechta serial ko\'rdingiz?' , '')
 
-const seriesDB = {
-    count: numberOfSeries,
-    series:{},
-    actors:{},
-    genres: [],
-    private: false, 
-}
+// const seriesDB = {
+//     count: numberOfSeries,
+//     series:{},
+//     actors:{},
+//     genres: [],
+//     private: false, 
+// }
 
-for (let i=0; i < 2; i++){
-    const firstQuestion = prompt('Oxirgi ko\'rgan serialingiz?', '')
-    const secondQuestion = prompt('Nechi baho berasiz?','')
-        if (firstQuestion !== null && secondQuestion !== null && firstQuestion !=='' && secondQuestion !==''){
-            seriesDB.series[firstQuestion]=secondQuestion;
-            console.log("Done");
-        }else{
-            i--;
-        }
-}
-if ( seriesDB.count < 5){
-    console.log("Kam serial ko'rar ekansiz");
-}else if (seriesDB.count > 10){
-    console.log("Super serial ko\'rar odam ekansiz")
-}else if (seriesDB.count >= 5 && seriesDB.count <= 10){
-    console.log("Klassik serial ko\'rar odam ekansiz")
-}
+// for (let i=0; i < 2; i++){
+//     const firstQuestion = prompt('Oxirgi ko\'rgan serialingiz?', '')
+//     const secondQuestion = prompt('Nechi baho berasiz?','')
+//         if (firstQuestion !== null && secondQuestion !== null && firstQuestion !=='' && secondQuestion !==''){
+//             seriesDB.series[firstQuestion]=secondQuestion;
+//             console.log("Done");
+//         }else{
+//             i--;
+//         }
+// }
+// if ( seriesDB.count < 5){
+//     console.log("Kam serial ko'rar ekansiz");
+// }else if (seriesDB.count > 10){
+//     console.log("Super serial ko\'rar odam ekansiz")
+// }else if (seriesDB.count >= 5 && seriesDB.count <= 10){
+//     console.log("Klassik serial ko\'rar odam ekansiz")
+// }
 
-console.log(seriesDB);
+// console.log(seriesDB);
 
-
+//--------------------------------------------------------------------------------------------------------------------------
 let numberOfSeries
 
 startApp()
