@@ -263,57 +263,157 @@
 
 //                                                     Function expression
 
-const showHelloWorld = function(text){
-    console.log(text);
-}
-showHelloWorld('Hello world');
+// const showHelloWorld = function(text){
+//     console.log(text);
+// }
+// showHelloWorld('Hello world');
 
-const calculate = function(a, b){
-    return (a+b);
-}
-console.log(calculate(5, 10));//15
+// const calculate = function(a, b){
+//     return (a+b);
+// }
+// console.log(calculate(5, 10));//15
 
-//                                                      Arrow function
+// //                                                      Arrow function
 
-const calculate1 = (a,b) =>{
-    console.log(a+b)
-}
-calculate1(2,5);// 7
+// const calculate1 = (a,b) =>{
+//     console.log(a+b)
+// }
+// calculate1(2,5);// 7
 
 
 //                                      Methods - Object ichidagi functionlar
 
 //                                                  String methods
 
-const text='Hello world';
-const password='      Abbos99     '
+// const text='Hello world';
+// const password='      Abbos99     '
 
-// Length is property
+// // Length is property
 
-console.log('Uzunligi', text.length)
+// console.log('Uzunligi', text.length)
 
-// Methods 
+// // Methods 
 
-console.log('1-usul Aniq pozitsiya indexdagi harf:', text.charAt(6))
-console.log('2-usul Aniq pozitsiya indexdagi harf:', text[6])
-console.log('Harflarni har birini kattalashtirish:', text.toUpperCase())
-console.log('Harflarni har birini kattalashtirish:', text.toLowerCase())
-console.log('1-usul Matinni kesish: oxiridan kesish uchun manfiy raqamdan foydalanamiz', text.slice(0,-4))// kesilganni qaytardi
-console.log('2-usul Matinni kesish:', text.substring(0, 4))
-console.log('Bo\'sh spacelarni olib tashlash ikki tarafdan', password.trim())
-console.log('Bo\'sh spacelarni olib tashlash old tarafdan', password.trimStart())
-console.log('Bo\'sh spacelarni olib tashlash orqa tarafdan', password.trimEnd())
-console.log(text)
+// console.log('1-usul Aniq pozitsiya indexdagi harf:', text.charAt(6))
+// console.log('2-usul Aniq pozitsiya indexdagi harf:', text[6])
+// console.log('Harflarni har birini kattalashtirish:', text.toUpperCase())
+// console.log('Harflarni har birini kattalashtirish:', text.toLowerCase())
+// console.log('1-usul Matinni kesish: oxiridan kesish uchun manfiy raqamdan foydalanamiz', text.slice(0,-4))// kesilganni qaytardi
+// console.log('2-usul Matinni kesish:', text.substring(0, 4))
+// console.log('Bo\'sh spacelarni olib tashlash ikki tarafdan', password.trim())
+// console.log('Bo\'sh spacelarni olib tashlash old tarafdan', password.trimStart())
+// console.log('Bo\'sh spacelarni olib tashlash orqa tarafdan', password.trimEnd())
+// console.log(text)
 
-//                              Number methods
+// //                              Number methods
 
-const number=12.6
-const width='240.42px'
+// const number=12.6
+// const width='240.42px'
 
-console.log('Sonni butunlab beradi', Math.round(number))
-console.log('Qattiy butunlaydi nuqtadan keingi sonni hisobga olmaydi', Math.floor(number))
-console.log('String malumot turidan butun sonni qaytarib beradi', parseInt(width))
-console.log('String malumot turidan son qilib beradi', parseFloat(width))
+// console.log('Sonni butunlab beradi', Math.round(number))
+// console.log('Qattiy butunlaydi nuqtadan keingi sonni hisobga olmaydi', Math.floor(number))
+// console.log('String malumot turidan butun sonni qaytarib beradi', parseInt(width))
+// console.log('String malumot turidan son qilib beradi', parseFloat(width))
 
 
-console.log(number)
+// console.log(number)
+// console.log(width)
+
+//                                                     Amaliyot
+const numberOfSeries = +prompt('Nechta serial ko\'rdingiz?' , '')
+
+const seriesDB = {
+    count: numberOfSeries,
+    series:{},
+    actors:{},
+    genres: [],
+    private: false, 
+}
+
+for (let i=0; i < 2; i++){
+    const firstQuestion = prompt('Oxirgi ko\'rgan serialingiz?', '')
+    const secondQuestion = prompt('Nechi baho berasiz?','')
+        if (firstQuestion !== null && secondQuestion !== null && firstQuestion !=='' && secondQuestion !==''){
+            seriesDB.series[firstQuestion]=secondQuestion;
+            console.log("Done");
+        }else{
+            i--;
+        }
+}
+if ( seriesDB.count < 5){
+    console.log("Kam serial ko'rar ekansiz");
+}else if (seriesDB.count > 10){
+    console.log("Super serial ko\'rar odam ekansiz")
+}else if (seriesDB.count >= 5 && seriesDB.count <= 10){
+    console.log("Klassik serial ko\'rar odam ekansiz")
+}
+
+console.log(seriesDB);
+
+
+let numberOfSeries
+
+startApp()
+
+const seriesDB = {
+	count: numberOfSeries,
+	series: {},
+	actors: {},
+	genres: [],
+	private: false,
+}
+
+setFavouriteSeries()
+detectingLevel()
+writeGenres()
+showDb(seriesDB.private)
+
+function startApp() {
+	numberOfSeries = +prompt('Nechta serial ko’rdingiz?', '')
+
+	while (
+		numberOfSeries == '' ||
+		numberOfSeries == null ||
+		isNaN(numberOfSeries)
+	) {
+		numberOfSeries = +prompt('Nechta serial ko’rdingiz?', '')
+	}
+}
+
+function setFavouriteSeries() {
+	for (let i = 0; i < 2; i++) {
+		const a = prompt(`Oxirgi ko’rgan serialingiz ${i + 1}?`, '')
+		const b = prompt(`Nechi baxo berasiz? ${i + 1}`, '')
+
+		if (a !== null && b !== null && a !== '' && b !== '') {
+			seriesDB.series[a] = b
+		} else {
+			i--
+		}
+	}
+}
+
+function detectingLevel() {
+	if (seriesDB.count < 5) {
+		console.log("Kam serial ko'ripsiz")
+	} else if (seriesDB.count >= 5 && seriesDB.count < 10) {
+		console.log('Siz classik tamoshabin ekansiz')
+	} else if (seriesDB.count >= 10) {
+		console.log('Siz serialchi zvezda ekansiz')
+	}
+}
+
+function writeGenres() {
+	for (let i = 0; i < 3; i++) {
+		const genre = prompt(`Yaxshi ko'rgan janringiz ${i + 1}?`, '')
+		seriesDB.genres[i] = genre
+	}
+}
+
+function showDb(isPrivate) {
+	if (!isPrivate) {
+		console.log(seriesDB)
+	} else {
+		console.log("Ma'lumot mahfiy saqlanmoqda")
+	}
+}
